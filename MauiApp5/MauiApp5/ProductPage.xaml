@@ -4,22 +4,26 @@
              xmlns:local="clr-namespace:MauiApp5"
              x:Class="MauiApp5.ProductPage"
              BindingContext="{x:Reference Produto}"
-             Title="ProductPage">
+             Title="{Binding Nome}"
+             BackgroundColor="#103f76"
+            Shell.BackgroundColor="#0d2746"
+            Shell.TitleColor="White">
     <HorizontalStackLayout Padding="15">
         <VerticalStackLayout>
             <Image Source="{Binding Imagem}" 
                    HeightRequest="400"/>
         </VerticalStackLayout>
         <VerticalStackLayout Padding="20">
-            <Label Text="{Binding Nome, StringFormat='Nome: {0}'}"
+            <Label Text="{Binding Nome, StringFormat='Título: {0}'}"
                    FontSize="Title"
-                   FontAttributes="Bold"/>
+                   FontAttributes="Bold"
+                   TextColor="White"/>
             <Label Text="{Binding Preco, StringFormat='Preço: {0:F2}'}"
                    FontSize="Subtitle"
-                   TextColor="Green" />
-            <Label Text="{Binding Data, StringFormat='Data de lançamento: {0}'}" FontSize="Subtitle"/>
-            <Label Text="{Binding Empresa, StringFormat='Empresa desenvolvedora: {0}'}" FontSize="Subtitle"/>
-            <Label Text="{Binding Descricao}" />
+                   TextColor="#6fe375" />
+            <Label Text="{Binding Data, StringFormat='Data de lançamento: {0}'}" FontSize="Subtitle" TextColor="White"/>
+            <Label Text="{Binding Empresa, StringFormat='Empresa desenvolvedora: {0}'}" FontSize="Subtitle" TextColor="White"/>
+            <Label Text="{Binding Descricao}" TextColor="White" />
         </VerticalStackLayout>
     </HorizontalStackLayout>
     <!--<VerticalStackLayout>

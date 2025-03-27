@@ -2,7 +2,9 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiApp5.MainPage"
-             BackgroundColor="Gray">
+             BackgroundColor="#103f76"
+             Shell.BackgroundColor="#0d2746"
+             Shell.TitleColor="White">
 
     <ScrollView>
         <VerticalStackLayout
@@ -14,10 +16,13 @@
                 HorizontalTextAlignment="Center" 
                 TextColor="White"/>
             <Button 
-                Background="#cabebb"
+                Background="#3b3534"
                 Text="Abrir lista de produto"
                 x:Name="btnProdutoLista"
                 Clicked="btnProdutoLista_Clicked"
+                WidthRequest="200"
+                BorderColor="#2c2928"
+                BorderWidth="6"
                 />
         </VerticalStackLayout>
     </ScrollView>
