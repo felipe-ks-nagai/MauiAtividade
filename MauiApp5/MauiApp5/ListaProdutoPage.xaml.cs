@@ -10,7 +10,9 @@ public partial class ListaProdutoPage : ContentPage
 	}
 
 
-    private void ImageButton_Clicked(object sender, EventArgs e)
+
+
+    private void ViewCell_Tapped(object sender, EventArgs e)
     {
         Navigation.PushAsync(new ProductPage() { BindingContext = ((ViewCell)sender).BindingContext });
     }

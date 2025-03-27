@@ -9,10 +9,10 @@
              Shell.TitleColor="White">
     <ScrollView>
         <VerticalStackLayout Padding="10">
-            <ListView x:Name="lstProduto" ItemsSource="{Binding Produtos}">
+            <ListView x:Name="lstProduto">
                 <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <ViewCell>
+                    <DataTemplate x:DataType="local:Produto" >
+                        <ViewCell Tapped="ViewCell_Tapped" >
                             <Grid Padding="15">
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="Auto"/>

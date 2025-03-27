@@ -5,35 +5,44 @@
              x:Class="MauiApp5.ProductPage"
              BindingContext="{x:Reference Produto}"
              Title="ProductPage">
-    <VerticalStackLayout>
+    <HorizontalStackLayout Padding="15">
+        <VerticalStackLayout>
+            <Image Source="{Binding Imagem}" 
+                   HeightRequest="400"/>
+        </VerticalStackLayout>
+        <VerticalStackLayout Padding="20">
+            <Label Text="{Binding Nome, StringFormat='Nome: {0}'}"
+                   FontSize="Title"
+                   FontAttributes="Bold"/>
+            <Label Text="{Binding Preco, StringFormat='Preço: {0:F2}'}"
+                   FontSize="Subtitle"
+                   TextColor="Green" />
+            <Label Text="{Binding Data, StringFormat='Data de lançamento: {0}'}" FontSize="Subtitle"/>
+            <Label Text="{Binding Empresa, StringFormat='Empresa desenvolvedora: {0}'}" FontSize="Subtitle"/>
+            <Label Text="{Binding Descricao}" />
+        </VerticalStackLayout>
+    </HorizontalStackLayout>
+    <!--<VerticalStackLayout>
         <HorizontalStackLayout>
             <Label 
-                Text="Nome"
-                VerticalOptions="Start" 
-                HorizontalOptions="Start" />
-            <Label 
-                Text="{Binding Nome}"
+                Text="{Binding Nome, StringFormat='Nome: {0}'}"
                 FontSize="Large"
                 VerticalOptions="End" 
                 HorizontalOptions="End" />
         </HorizontalStackLayout>
-        <Label 
-            Text="Preço"
-            VerticalOptions="Start" 
-            HorizontalOptions="Start" />
-        <Label 
-            Text="{Binding Preco}"
-            FontSize="Large"
-            VerticalOptions="Start" 
-            HorizontalOptions="End" />
-        <Label 
-            Text="Categoria"
-            VerticalOptions="Start" 
-            HorizontalOptions="Start" />
-        <Label 
-            Text="{Binding Categoria}"
-            FontSize="Large"
-            VerticalOptions="Start" 
-            HorizontalOptions="End" />
-    </VerticalStackLayout>
+        <HorizontalStackLayout>
+            <Label 
+                Text="{Binding Preco, StringFormat='Preço: R${0:F2}'}"
+                FontSize="Large"
+                VerticalOptions="Start" 
+                HorizontalOptions="End" />
+        </HorizontalStackLayout>
+        <HorizontalStackLayout>
+            <Label 
+                Text="{Binding Categoria}"
+                FontSize="Large"
+                VerticalOptions="Start" 
+                HorizontalOptions="End" />
+        </HorizontalStackLayout>
+    </VerticalStackLayout>-->
 </ContentPage>

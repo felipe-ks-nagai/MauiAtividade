@@ -6,4 +6,9 @@ public partial class ProductPage : ContentPage
 	{
 		InitializeComponent();
 	}
+
+	
+
+   
+
 }
